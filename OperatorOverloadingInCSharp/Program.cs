@@ -31,6 +31,18 @@
             //The result of ++x is the value of x after the operation, as the following example shows:
             Console.WriteLine(++x);//add then print = 4
             Console.WriteLine(x); //4
+            //Decrement operator --
+            //Postfix decrement operator
+            int w = 4;
+            Console.WriteLine(w);//4
+            Console.WriteLine(w--);// operation after will print 4
+            Console.WriteLine(w);//3
+
+            //Prefix decrement operator
+            int z = 4;
+            Console.WriteLine(z);//4
+            Console.WriteLine(--z);// operation before will print 3
+            Console.WriteLine(w);//3
         }
     }
     public readonly struct Fraction
