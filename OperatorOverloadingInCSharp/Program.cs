@@ -11,6 +11,26 @@
             Console.WriteLine(a - b);  // output: 6 / 8
             Console.WriteLine(a * b);  // output: 5 / 8
             Console.WriteLine(a / b);  // output: 10 / 4
+            ////////////////////////
+            ///Postfix increment operator
+
+            int i = 3;
+            Console.WriteLine(i);   // output: 3
+            //The increment operator is supported in two forms: 
+            //    the postfix increment operator, x++, and 
+            //    the prefix increment operator, ++x.
+            //The result of x++ is the value of x before the operation,
+            //as the following example shows:
+            Console.WriteLine(i++); // output: 3  //print then add
+            Console.WriteLine(i);   // output: 4
+
+
+            //Prefix increment operator
+            int x = 3;
+            Console.WriteLine(x);
+            //The result of ++x is the value of x after the operation, as the following example shows:
+            Console.WriteLine(++x);//add then print = 4
+            Console.WriteLine(x); //4
         }
     }
     public readonly struct Fraction
@@ -33,7 +53,7 @@
         public static Fraction operator -(Fraction a) => new Fraction(-a.num, a.den);
 
         public static Fraction operator +(Fraction a, Fraction b)
-            => new Fraction(a.num * b.den + b.num * a.den, a.den * b.den);
+            => new Fraction(a.num * b.den + b.num * a.den, a.den * b.den);//(5/4) +(1/2)=>4/4+5+(2*1)/4
 
         public static Fraction operator -(Fraction a, Fraction b)
             => a + (-b);
